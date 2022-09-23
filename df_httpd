@@ -6,6 +6,6 @@ RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page2
 RUN apt install unzip -y
 RUN unzip lodge.zip
 RUN rm -rf lodge.zip
-RUN mv lodge/* /usr/local/apache2/htdocs
+RUN mv lodge-html/* /usr/local/apache2/htdocs
 CMD httpd-foreground
  
