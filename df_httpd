@@ -1,11 +1,11 @@
 FROM httpd:latest
-RUN rm -rf /usr/local/apache2/htdocs/*
+RUN rm -rf /usr/local/apache2/htdocs/index.html
 RUN apt update -y
 RUN apt install wget -y
 RUN wget https://www.free-css.com/assets/files/free-css-templates/download/page283/lodge.zip
 RUN apt install unzip -y
 RUN unzip lodge.zip
-RUN rm -rf *.zip
+RUN rm -rf lodge.zip
 RUN mv lodge/* /usr/local/apache2/htdocs
 CMD httpd-foreground
  
