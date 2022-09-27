@@ -1,0 +1,21 @@
+apiVersion : apps/v1
+kind : Deployment
+metadata:
+  name : tom-deployment
+  labels:
+    app : tom
+spec:
+  template:
+    metadata:
+      labels:
+        app : tom
+    spec:
+      containers:
+      - name : tomcat
+        image: devtechieops/tom:5.0
+        ports:
+        - containerPort : 8080
+  selector:
+    matchLabels:
+      app : tom
+
