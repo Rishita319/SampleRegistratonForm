@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name : tomcat
-        image: devtechieops/tom:5.0
+        image: devtechieops/tom:$(cat appVersion.txt)
         ports:
         - containerPort : 8080
   selector:
