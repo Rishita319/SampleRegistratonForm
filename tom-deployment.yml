@@ -15,12 +15,6 @@ spec:
         image: devtechieops/tom:latest
         ports:
         - containerPort : 8080
-      - name : lodge
-        image: devtechieops/lodge:latest
-        ports:
-        - containerPort : 80
   selector:
     matchLabels:
       app : tom
-  replicas : 5
-
